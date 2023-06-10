@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Case Number</th>
+            <th>Property Number</th>
+            <th>Property Type</th>
+            <th>Appraisal Value</th>
+            <th>Minimum Sale Price</th>
+            <th>Bidding Method</th>
+            <th>Sale Date</th>
+            <th>Property Notes</th>
+            <th>Location 1</th>
+            <th>Location 2</th>
+            <th>Location 3</th>
+            <th>Responsible Person</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for case in case_list %}
+        <tr>
+            <td>{{ case.case_num }}</td>
+
+            <td>{{ case.property_num }}</td>
+            <td>{{ case.property_type }}</td>
+            <td>{{ case.appraisal_value }}</td>
+            <td>{{ case.minimum_sale_price }}</td>
+            <td>{{ case.bidding_method }}</td>
+            <td>{{ case.sale_date }}</td>
+            <td>{{ case.property_notes }}</td>
+            <td>{{ case.location_1 }}</td>
+            <td>{{ case.location_2 }}</td>
+            <td>{{ case.location_3 }}</td>
+            <td>{{ case.responsible_person }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
+
+<!-- case_list.html -->
+
+<!--{{ case_list }}-->
+<!--{{ case_list.case_num }}-->
+
+<!-- case_list.html -->
+<!--{% for case in case_list %}-->
+<!--    <div>-->
+<!--        <h2>{{ case.case_num }}</h2>-->
+<!--        <p>Property Number: {{ case.property_num }}</p>-->
+<!--        <p>Property Type: {{ case.property_type }}</p>-->
+<!--        <p>Appraisal Value: {{ case.appraisal_value }}</p>-->
+<!--        <p>Minimum Sale Price: {{ case.minimum_sale_price }}</p>-->
+<!--        <p>Bidding Method: {{ case.bidding_method }}</p>-->
+<!--        <p>Sale Date: {{ case.sale_date }}</p>-->
+<!--        <p>Property Notes: {{ case.property_notes }}</p>-->
+<!--        <p>Location 1: {{ case.location_1 }}</p>-->
+<!--        <p>Location 2: {{ case.location_2 }}</p>-->
+<!--        <p>Location 3: {{ case.location_3 }}</p>-->
+<!--        <p>Responsible Person: {{ case.responsible_person }}</p>-->
+<!--        &lt;!&ndash; Add more fields as needed &ndash;&gt;-->
+<!--    </div>-->
+<!--{% endfor %}-->
+
+
+<!--{% for case in case_list %}-->
+<!--    <div>-->
+<!--        <h2>{{ case.case_num }}</h2>-->
+<!--        <p>Property Number: {{ case.property_num }}</p>-->
+<!--        <p>Property Type: {{ case.property_type }}</p>-->
+<!--        &lt;!&ndash; 나머지 필드들도 출력 &ndash;&gt;-->
+<!--    </div>-->
+<!--{% endfor %}-->
