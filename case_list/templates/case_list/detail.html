@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>Case Number</th>
+            <th>Property Number</th>
+            <th>Property Type</th>
+            <th>Appraisal Value</th>
+            <th>Minimum Sale Price</th>
+            <th>Bidding Method</th>
+            <th>Sale Date</th>
+            <th>Property Notes</th>
+            <th>Location 1</th>
+            <th>Location 2</th>
+            <th>Location 3</th>
+            <th>Responsible Person</th>
+        </tr>
+    </thead>
+  <tbody>
+    <tr>
+        <td>{{ case.case_num }}</td>
+        <td>{{ case.property_num }}</td>
+        <td>{{ case.property_type }}</td>
+        <td>{{ case.appraisal_value }}</td>
+        <td>{{ case.minimum_sale_price }}</td>
+        <td>{{ case.bidding_method }}</td>
+        <td>{{ case.sale_date }}</td>
+        <td>{{ case.property_notes }}</td>
+        <td>{{ case.location_1 }}</td>
+        <td>{{ case.location_2 }}</td>
+        <td>{{ case.location_3 }}</td>
+        <td>{{ case.responsible_person }}</td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
