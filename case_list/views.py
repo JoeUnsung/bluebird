@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, get_list_or_404
 from .models import CaseList
 
 def case_list(request):
@@ -8,7 +8,7 @@ def case_list(request):
     :return:
     '''
     # CaseList 모델의 모든 데이터를 가져옴
-    case_list = CaseList.objects.all()
+    case_list = CaseList.objects.all() ## get_list_or_404로 이후에 각 지역별/권역별로 나눈 뒤에 적용
 
     # context에 case_list 추가하여 HTML에 전달
     context = {'case_list': case_list}
@@ -17,7 +17,7 @@ def case_list(request):
 
 def case_detail(request, pk=None):
     '''
-    pk 기반으로
+    pk 기반으로 상세페이지에 필요한 정보를 렌더링하는 함수뷰
     :param request:
     :param pk:
     :return:
@@ -25,6 +25,7 @@ def case_detail(request, pk=None):
     if pk is None:
         # pk = 1
         case_num = '2021타경1767'
+        # case_num = '2021타경17672222'
 
     # case = get_object_or_404(CaseList, pk=pk)
     case = get_object_or_404(CaseList, case_num=case_num)
