@@ -23,11 +23,11 @@ def case_detail(request, pk=None):
     :return:
     '''
     if pk is None:
-        # pk = 1
+        pk = 1
         case_num = '2021타경1767'
         # case_num = '2021타경17672222'
 
-    # case = get_object_or_404(CaseList, pk=pk)
-    case = get_object_or_404(CaseList, case_num=case_num)
+    case = get_object_or_404(CaseList, case_id=pk)
+    # case = get_object_or_404(CaseList, case_num=case_num)
     return render(request, 'case_list/detail.html', {'case': case})
 

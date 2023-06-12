@@ -22,7 +22,8 @@
         {% for case in case_list %}
         <tr>
 <!--            <td>{{ case.case_num }}</td>-->
-            <td> <a href="{% url 'case_list:case_detail' %}">{{ case.case_num }}</a> </td>
+<!--            <td> <a href="{% url 'case_list:case_detail' %}">{{ case.case_num }}</a> </td>-->
+            <td> <a href="{% url 'case_list:case_detail' pk=case.pk %}">{{ case.case_num }}</a> </td>
             <td>{{ case.property_num }}</td>
             <td>{{ case.property_type }}</td>
             <td>{{ case.appraisal_value }}</td>
