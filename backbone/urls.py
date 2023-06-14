@@ -22,6 +22,9 @@ urlpatterns = [
 
     ## 2. case
     path('case_list/', include('case_list.urls')),
+
+    ## 3. users
+    path('user/', include('user.urls')),  # user 앱의 URL 패턴을 포함시킵니다.
 ]
 
 

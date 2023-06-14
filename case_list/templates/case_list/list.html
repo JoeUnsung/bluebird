@@ -12,17 +12,15 @@
             <th>Bidding Method</th>
             <th>Sale Date</th>
             <th>Property Notes</th>
-            <th>Location 1</th>
-            <th>Location 2</th>
-            <th>Location 3</th>
-            <th>Responsible Person</th>
+<!--            <th>Location 1</th>-->
+<!--            <th>Location 2</th>-->
+<!--            <th>Location 3</th>-->
+<!--            <th>Responsible Person</th>-->
         </tr>
     </thead>
     <tbody>
         {% for case in case_list %}
         <tr>
-<!--            <td>{{ case.case_num }}</td>-->
-<!--            <td> <a href="{% url 'case_list:case_detail' %}">{{ case.case_num }}</a> </td>-->
             <td> <a href="{% url 'case_list:case_detail' pk=case.pk %}">{{ case.case_num }}</a> </td>
             <td>{{ case.property_num }}</td>
             <td>{{ case.property_type }}</td>
@@ -31,15 +29,18 @@
             <td>{{ case.bidding_method }}</td>
             <td>{{ case.sale_date }}</td>
             <td>{{ case.property_notes }}</td>
-            <td>{{ case.location_1 }}</td>
-            <td>{{ case.location_2 }}</td>
-            <td>{{ case.location_3 }}</td>
-            <td>{{ case.responsible_person }}</td>
+<!--            <td>{{ case.location_1 }}</td>-->
+<!--            <td>{{ case.location_2 }}</td>-->
+<!--            <td>{{ case.location_3 }}</td>-->
+<!--            <td>{{ case.responsible_person }}</td>-->
         </tr>
         {% endfor %}
     </tbody>
 </table>
 {% endblock %}
+
+
+
 
 <!--            <a href="{% url 'case_list:case_detail' pk=case.pk %}">{{ case.case_num }}</a>-->
 
